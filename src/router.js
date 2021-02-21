@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import NotFound from "./Pages/NotFound/NotFound";
 import MainLayout from "./Components/Layout/MainLayout";
+import ListaProdutos from "./Pages/Produtos/ListaProdutos";
 
 
 const isAuthenticated = () => {
@@ -35,6 +36,7 @@ const AppCardapioRouter = () => {
         <BrowserRouter>
             <Switch>
                 <PrivateRoute path='/' exact={true} component={Home}/>
+                <PrivateRoute path='/produtos' exact={true} component={ListaProdutos}/>
                 <Route path='/login' component={Login}/>
                 <Route component={NotFound}/>
             </Switch>

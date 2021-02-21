@@ -15,11 +15,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import LinkWrapper from "../Navegacao/LinkWrapper";
-import Button from "@material-ui/core/Button";
-import {Link} from "@material-ui/core";
+import StorefrontIcon from '@material-ui/icons/Storefront';
+import {Card, CardContent, Link} from "@material-ui/core";
 
 const drawerWidth = 240;
 
@@ -107,9 +104,11 @@ export default function MainLayout(props) {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Persistent drawer
-                    </Typography>
+                    <Link href="/" color="inherit" >
+                        <Typography variant="h6" noWrap>
+                            Cardápio Online
+                        </Typography>
+                    </Link>
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -128,14 +127,20 @@ export default function MainLayout(props) {
                 </div>
                 <Divider/>
                 <List>
-                    <ListItem button>
-                        <ListItemIcon><InboxIcon/></ListItemIcon>
-                        <Link href="/login" color="inherit" >Produtos</Link>
-                    </ListItem>
+                    <Link href="/produtos" color="inherit" >
+                        <ListItem button>
+                            <ListItemIcon><StorefrontIcon/></ListItemIcon>
+                            <ListItemText primary="Produtos" />
+                        </ListItem>
+                    </Link>
                 </List>
             </Drawer>
             <main className={clsx(classes.content, { [classes.contentShift]: open, })} >
-                {props.children}
+                <Card variant="outlined">
+                    <CardContent >
+                        {props.children}
+                    </CardContent>
+                </Card>
             </main>
         </div>
     );
