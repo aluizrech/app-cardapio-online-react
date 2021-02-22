@@ -16,6 +16,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import StorefrontIcon from '@material-ui/icons/Storefront';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {Card, CardContent, Link} from "@material-ui/core";
 
 const drawerWidth = 240;
@@ -131,6 +132,12 @@ export default function MainLayout(props) {
                         <ListItem button>
                             <ListItemIcon><StorefrontIcon/></ListItemIcon>
                             <ListItemText primary="Produtos" />
+                        </ListItem>
+                    </Link>
+                    <Link href="/carrinho-compras" color="inherit" >
+                        <ListItem button>
+                            <ListItemIcon><ShoppingCartIcon/></ListItemIcon>
+                            <ListItemText primary="Carrinho de Compras" />
                         </ListItem>
                     </Link>
                 </List>
