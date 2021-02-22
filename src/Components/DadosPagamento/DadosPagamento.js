@@ -4,6 +4,7 @@ import {Button, Chip, TextField} from "@material-ui/core";
 import './DadosPagamento.css';
 import NumberFormat from "../../Utils/NumberFormat";
 import LocalStorageUtils from "../../Utils/LocalStorageUtils";
+import PedidoService from "../../Services/PedidoService";
 
 export default class DadosPagamento extends Component {
 
@@ -41,7 +42,11 @@ export default class DadosPagamento extends Component {
             pedido: produtosCarrinho,
             dadosPagamento: this.state,
         }
-        console.log(pedido);
+        PedidoService.salvarPedido(pedido).then(r => {
+            this.cancelarPedido();
+        }).catch(e => {
+            console.log(e);
+        });
     }
 
     render() {
