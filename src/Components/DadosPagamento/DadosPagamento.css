@@ -1,0 +1,30 @@
+.nome-numero {
+    width: 49%;
+    margin: 5px !important;
+}
+
+.card-fields {
+    width: 32.50%;
+    margin: 5px !important;
+}
+
+.mt-3{
+    margin-top: 3px !important;
+}
+
+.mr-5{
+    margin-right: 5px !important;
+}
+
+
+.float-right {
+    float: right;
+}
+.dv-total {
+    width: 99%;
+}
+
+.p-acoes {
+    text-align: center;
+    padding: 5px !important;
+}
