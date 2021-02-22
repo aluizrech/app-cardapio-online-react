@@ -5,8 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import { Fab, TextField} from "@material-ui/core";
 import NumberFormat from "../../Utils/NumberFormat";
-import {AddIcon} from "@material-ui/data-grid";
 import DeleteIcon from '@material-ui/icons/Delete';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 import './CardProduto.css';
 
@@ -102,7 +102,7 @@ export default class CardProduto extends Component {
                             </Fab>
                         ) : (
                             <Fab color="primary" aria-label="add" size="small" className="botaoAdd" onClick={this.addItemCarrinho.bind(this)} >
-                                <AddIcon />
+                                <AddCircleIcon />
                             </Fab>
                         )
                     }
